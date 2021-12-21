@@ -1,0 +1,21 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss ./src/tailwind.css -o ./public/css/main.css",
+    "build": "NODE_ENV=production postcss ./src/tailwind.css -o ./public/css/main.css",
+    "dev": "nodemon -x npm run build:css -w ./src/tailwind.css -w tailwind.config.js -w ./public/*.*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/jit": "^0.1.18",
+    "autoprefixer": "^10.4.0",
+    "nodemon": "^2.0.15",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.7"
+  }
+}
